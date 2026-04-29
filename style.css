@@ -1,0 +1,1628 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background-color: #1565c0;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo a {
+    background-color: #fff;
+    color: #1565c0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+header nav ul li a:hover,
+header nav ul li a[aria-current="page"] {
+    border-bottom-color: #fff;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== HERO SECTION ===== */
+section[aria-labelledby="hero-heading"] {
+    position: relative;
+    margin: 40px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+section[aria-labelledby="hero-heading"] figure {
+    margin: 0;
+}
+
+section[aria-labelledby="hero-heading"] figure img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+section[aria-labelledby="hero-heading"] div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 32px 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+section[aria-labelledby="hero-heading"] h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="hero-heading"] p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+section[aria-labelledby="hero-heading"] a {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+section[aria-labelledby="hero-heading"] a:first-of-type {
+    background-color: #1565c0;
+    color: #fff;
+}
+
+section[aria-labelledby="hero-heading"] a:first-of-type:hover {
+    background-color: #0d47a1;
+}
+
+section[aria-labelledby="hero-heading"] a:last-of-type {
+    background-color: #fff;
+    color: #1565c0;
+}
+
+section[aria-labelledby="hero-heading"] a:last-of-type:hover {
+    background-color: #e3f2fd;
+}
+
+/* ===== HIGHLIGHTS SECTION ===== */
+section[aria-labelledby="highlights-heading"] {
+    padding: 48px 0;
+    text-align: center;
+}
+
+section[aria-labelledby="highlights-heading"] h2 {
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+    color: #1565c0;
+}
+
+section[aria-labelledby="highlights-heading"] ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+section[aria-labelledby="highlights-heading"] li {
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    padding: 24px 20px;
+}
+
+section[aria-labelledby="highlights-heading"] h3 {
+    font-size: 1rem;
+    color: #1565c0;
+    margin-bottom: 8px;
+}
+
+section[aria-labelledby="highlights-heading"] p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ===== SERVICES TABLE ===== */
+section[aria-labelledby="services-heading"] {
+    padding: 48px 0;
+}
+
+section[aria-labelledby="services-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+
+caption {
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #555;
+}
+
+th {
+    background-color: #1565c0;
+    color: #fff;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+section[aria-labelledby="services-heading"] > p a {
+    font-weight: 600;
+    color: #1565c0;
+}
+
+/* ===== ABOUT PAGE HERO ===== */
+section[aria-labelledby="about-hero-heading"] {
+    text-align: center;
+    margin: 40px 0;
+}
+
+section[aria-labelledby="about-hero-heading"] figure {
+    margin: 0 0 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+section[aria-labelledby="about-hero-heading"] figure img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+section[aria-labelledby="about-hero-heading"] h1 {
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="about-hero-heading"] p {
+    font-size: 1.05rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== OUR STORY ===== */
+section[aria-labelledby="story-heading"] {
+    padding: 48px 0;
+}
+
+section[aria-labelledby="story-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 28px;
+}
+
+section[aria-labelledby="story-heading"] > div {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+}
+
+section[aria-labelledby="story-heading"] figure {
+    margin: 0;
+}
+
+section[aria-labelledby="story-heading"] figure img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+section[aria-labelledby="story-heading"] figcaption {
+    font-size: 0.85rem;
+    color: #888;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+section[aria-labelledby="story-heading"] > div > div p {
+    margin-bottom: 16px;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* ===== OUR VISION ===== */
+section[aria-labelledby="vision-heading"] {
+    padding: 48px 0;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 40px;
+}
+
+section[aria-labelledby="vision-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 24px;
+}
+
+section[aria-labelledby="vision-heading"] figure {
+    margin: 0 0 28px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section[aria-labelledby="vision-heading"] figure img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+section[aria-labelledby="vision-heading"] blockquote {
+    border-left: 4px solid #1565c0;
+    padding: 16px 24px;
+    margin: 0 0 20px 0;
+    background-color: #e3f2fd;
+    border-radius: 0 8px 8px 0;
+}
+
+section[aria-labelledby="vision-heading"] blockquote p {
+    font-style: italic;
+    color: #1a1a2e;
+    font-size: 1.05rem;
+}
+
+section[aria-labelledby="vision-heading"] > p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ===== OUR MISSION ===== */
+section[aria-labelledby="mission-heading"] {
+    padding: 48px 0;
+}
+
+section[aria-labelledby="mission-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 16px;
+}
+
+section[aria-labelledby="mission-heading"] > p {
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+section[aria-labelledby="mission-heading"] ul {
+    list-style: none;
+    padding: 0;
+}
+
+section[aria-labelledby="mission-heading"] ul li {
+    padding: 12px 16px;
+    border-left: 4px solid #1565c0;
+    margin-bottom: 12px;
+    background-color: #f5f5f5;
+    border-radius: 0 6px 6px 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ===== OUR VALUES ===== */
+section[aria-labelledby="values-heading"] {
+    padding: 48px 0;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 40px;
+}
+
+section[aria-labelledby="values-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 28px;
+}
+
+section[aria-labelledby="values-heading"] dl {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 12px 24px;
+    align-items: start;
+}
+
+section[aria-labelledby="values-heading"] dt {
+    font-weight: 700;
+    color: #1565c0;
+    padding-top: 4px;
+}
+
+section[aria-labelledby="values-heading"] dd {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+section[aria-labelledby="values-heading"] dt:last-of-type + dd {
+    border-bottom: none;
+}
+
+/* ===== MILESTONES TABLE ===== */
+section[aria-labelledby="milestones-heading"] {
+    padding: 48px 0;
+}
+
+section[aria-labelledby="milestones-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 24px;
+}
+
+/* ===== HOW IT WORKS ===== */
+section[aria-labelledby="how-heading"] {
+    padding: 48px 0;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 40px;
+}
+
+section[aria-labelledby="how-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 28px;
+}
+
+section[aria-labelledby="how-heading"] ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 0;
+}
+
+section[aria-labelledby="how-heading"] li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+section[aria-labelledby="how-heading"] h3 {
+    font-size: 1rem;
+    color: #1565c0;
+    margin-bottom: 8px;
+}
+
+section[aria-labelledby="how-heading"] p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ===== TESTIMONIALS ===== */
+section[aria-labelledby="testimonials-heading"] {
+    padding: 48px 0;
+    text-align: center;
+}
+
+section[aria-labelledby="testimonials-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 32px;
+}
+
+section[aria-labelledby="testimonials-heading"] article {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 24px;
+    margin: 0 1%;
+}
+
+section[aria-labelledby="testimonials-heading"] blockquote p {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="testimonials-heading"] article footer {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* ===== CALL TO ACTION ===== */
+section[aria-labelledby="cta-heading"] {
+    background-color: #1565c0;
+    color: #fff;
+    text-align: center;
+    padding: 48px 40px;
+    border-radius: 12px;
+    margin-bottom: 48px;
+}
+
+section[aria-labelledby="cta-heading"] h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="cta-heading"] p {
+    margin-bottom: 24px;
+    font-size: 1rem;
+}
+
+section[aria-labelledby="cta-heading"] a {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+section[aria-labelledby="cta-heading"] a:first-of-type {
+    background-color: #fff;
+    color: #1565c0;
+}
+
+section[aria-labelledby="cta-heading"] a:first-of-type:hover {
+    background-color: #e3f2fd;
+}
+
+section[aria-labelledby="cta-heading"] a:last-of-type {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+section[aria-labelledby="cta-heading"] a:last-of-type:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== SERVICES PAGE HERO ===== */
+section[aria-labelledby="services-hero-heading"] {
+    text-align: center;
+    margin: 40px 0;
+}
+
+section[aria-labelledby="services-hero-heading"] figure {
+    margin: 0 0 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+section[aria-labelledby="services-hero-heading"] figure img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+section[aria-labelledby="services-hero-heading"] h1 {
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="services-hero-heading"] p {
+    font-size: 1.05rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== SHARED: SERVICE DETAIL SECTIONS ===== */
+/* Applies to drop-off, pickup, ironing, dry cleaning */
+section[aria-labelledby="dropoff-heading"],
+section[aria-labelledby="pickup-heading"],
+section[aria-labelledby="ironing-heading"],
+section[aria-labelledby="drycleaning-heading"] {
+    padding: 48px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="dropoff-heading"] h2,
+section[aria-labelledby="pickup-heading"] h2,
+section[aria-labelledby="ironing-heading"] h2,
+section[aria-labelledby="drycleaning-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 24px;
+}
+
+/* Two-column layout: image + text */
+section[aria-labelledby="dropoff-heading"] > div,
+section[aria-labelledby="pickup-heading"] > div,
+section[aria-labelledby="ironing-heading"] > div,
+section[aria-labelledby="drycleaning-heading"] > div {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Alternate: image on right for even sections */
+section[aria-labelledby="pickup-heading"] > div,
+section[aria-labelledby="drycleaning-heading"] > div {
+    direction: rtl;
+}
+
+section[aria-labelledby="pickup-heading"] > div > *,
+section[aria-labelledby="drycleaning-heading"] > div > * {
+    direction: ltr;
+}
+
+/* Shared figure styles */
+section[aria-labelledby="dropoff-heading"] figure,
+section[aria-labelledby="pickup-heading"] figure,
+section[aria-labelledby="ironing-heading"] figure,
+section[aria-labelledby="drycleaning-heading"] figure {
+    margin: 0;
+}
+
+section[aria-labelledby="dropoff-heading"] figure img,
+section[aria-labelledby="pickup-heading"] figure img,
+section[aria-labelledby="ironing-heading"] figure img,
+section[aria-labelledby="drycleaning-heading"] figure img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 300px;
+}
+
+section[aria-labelledby="dropoff-heading"] figcaption,
+section[aria-labelledby="pickup-heading"] figcaption,
+section[aria-labelledby="ironing-heading"] figcaption,
+section[aria-labelledby="drycleaning-heading"] figcaption {
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Shared text content */
+section[aria-labelledby="dropoff-heading"] > div > div p,
+section[aria-labelledby="pickup-heading"] > div > div p,
+section[aria-labelledby="ironing-heading"] > div > div p,
+section[aria-labelledby="drycleaning-heading"] > div > div p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="dropoff-heading"] h3,
+section[aria-labelledby="pickup-heading"] h3,
+section[aria-labelledby="ironing-heading"] h3,
+section[aria-labelledby="drycleaning-heading"] h3 {
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin: 16px 0 8px 0;
+}
+
+section[aria-labelledby="dropoff-heading"] ul,
+section[aria-labelledby="pickup-heading"] ul,
+section[aria-labelledby="ironing-heading"] ul,
+section[aria-labelledby="drycleaning-heading"] ul,
+section[aria-labelledby="pickup-heading"] ol {
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+section[aria-labelledby="dropoff-heading"] ul li,
+section[aria-labelledby="pickup-heading"] ul li,
+section[aria-labelledby="ironing-heading"] ul li,
+section[aria-labelledby="drycleaning-heading"] ul li,
+section[aria-labelledby="pickup-heading"] ol li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+/* ===== MEET THE TEAM ===== */
+section[aria-labelledby="team-heading"] {
+    padding: 48px 0;
+}
+
+section[aria-labelledby="team-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="team-heading"] > p {
+    color: #555;
+    margin-bottom: 32px;
+    line-height: 1.8;
+}
+
+section[aria-labelledby="team-heading"] ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+section[aria-labelledby="team-heading"] li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+}
+
+section[aria-labelledby="team-heading"] figure {
+    margin: 0 0 16px 0;
+}
+
+section[aria-labelledby="team-heading"] figure img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 3px solid #1565c0;
+}
+
+section[aria-labelledby="team-heading"] h3 {
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+}
+
+section[aria-labelledby="team-heading"] li > p:first-of-type {
+    color: #1565c0;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="team-heading"] li > p:last-of-type {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.6;
+}
+/* ===== PRICING PAGE HERO ===== */
+section[aria-labelledby="pricing-hero-heading"] {
+    text-align: center;
+    margin: 40px 0;
+}
+
+section[aria-labelledby="pricing-hero-heading"] figure {
+    margin: 0 0 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+section[aria-labelledby="pricing-hero-heading"] figure img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+section[aria-labelledby="pricing-hero-heading"] h1 {
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="pricing-hero-heading"] p {
+    font-size: 1.05rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== SHARED: PRICING TABLE SECTIONS ===== */
+section[aria-labelledby="wf-pricing-heading"],
+section[aria-labelledby="iron-pricing-heading"],
+section[aria-labelledby="dc-pricing-heading"] {
+    padding: 48px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="wf-pricing-heading"] h2,
+section[aria-labelledby="iron-pricing-heading"] h2,
+section[aria-labelledby="dc-pricing-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="wf-pricing-heading"] > p,
+section[aria-labelledby="iron-pricing-heading"] > p,
+section[aria-labelledby="dc-pricing-heading"] > p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+section[aria-labelledby="wf-pricing-heading"] p em,
+section[aria-labelledby="iron-pricing-heading"] p em {
+    font-size: 0.9rem;
+    color: #888;
+    display: block;
+    margin-top: 12px;
+}
+
+/* ===== PACKAGES ===== */
+section[aria-labelledby="packages-heading"] {
+    padding: 48px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="packages-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="packages-heading"] > p {
+    color: #555;
+    margin-bottom: 32px;
+    line-height: 1.8;
+}
+
+section[aria-labelledby="packages-heading"] article {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 28px 24px;
+}
+
+/* Highlight the middle (most popular) package */
+section[aria-labelledby="packages-heading"] article:nth-child(3) {
+    background-color: #1565c0;
+    color: #fff;
+    border-color: #1565c0;
+    transform: translateY(-6px);
+}
+
+section[aria-labelledby="packages-heading"] article:nth-child(3) h3,
+section[aria-labelledby="packages-heading"] article:nth-child(3) p,
+section[aria-labelledby="packages-heading"] article:nth-child(3) li {
+    color: #fff;
+}
+
+section[aria-labelledby="packages-heading"] article h3 {
+    font-size: 1.1rem;
+    color: #1565c0;
+    margin-bottom: 6px;
+}
+
+section[aria-labelledby="packages-heading"] article > p:first-of-type {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 16px;
+}
+
+section[aria-labelledby="packages-heading"] article ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+section[aria-labelledby="packages-heading"] article ul li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+section[aria-labelledby="packages-heading"] article:nth-child(3) ul li {
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+section[aria-labelledby="packages-heading"] article ul li::before {
+    content: "✓ ";
+    color: #1565c0;
+    font-weight: 700;
+}
+
+section[aria-labelledby="packages-heading"] article:nth-child(3) ul li::before {
+    color: #fff;
+}
+
+section[aria-labelledby="packages-heading"] article a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1565c0;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+section[aria-labelledby="packages-heading"] article a:hover {
+    background-color: #0d47a1;
+}
+
+section[aria-labelledby="packages-heading"] article:nth-child(3) a {
+    background-color: #fff;
+    color: #1565c0;
+}
+
+section[aria-labelledby="packages-heading"] article:nth-child(3) a:hover {
+    background-color: #e3f2fd;
+}
+
+/* ===== BOOK NOW CTA ===== */
+section[aria-labelledby="booknow-cta-heading"] {
+    background-color: #1565c0;
+    color: #fff;
+    text-align: center;
+    padding: 48px 40px;
+    border-radius: 12px;
+    margin: 48px 0;
+}
+
+section[aria-labelledby="booknow-cta-heading"] h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="booknow-cta-heading"] p {
+    margin-bottom: 24px;
+    font-size: 1rem;
+}
+
+section[aria-labelledby="booknow-cta-heading"] a {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #fff;
+    color: #1565c0;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+section[aria-labelledby="booknow-cta-heading"] a:hover {
+    background-color: #e3f2fd;
+}
+/* ===== BOOK NOW PAGE HERO ===== */
+section[aria-labelledby="book-hero-heading"] {
+    text-align: center;
+    padding: 48px 40px;
+    background-color: #e3f2fd;
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+section[aria-labelledby="book-hero-heading"] h1 {
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="book-hero-heading"] p {
+    font-size: 1.05rem;
+    color: #444;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ===== HOW BOOKING WORKS ===== */
+section[aria-labelledby="booking-steps-heading"] {
+    padding: 48px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="booking-steps-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 28px;
+}
+
+section[aria-labelledby="booking-steps-heading"] ol {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    counter-reset: steps;
+}
+
+section[aria-labelledby="booking-steps-heading"] li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px 16px;
+    position: relative;
+    counter-increment: steps;
+}
+
+section[aria-labelledby="booking-steps-heading"] li::before {
+    content: counter(steps);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #1565c0;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="booking-steps-heading"] h3 {
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+section[aria-labelledby="booking-steps-heading"] p {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===== SHARED: BOOKING DETAIL SECTIONS ===== */
+section[aria-labelledby="pickup-booking-heading"],
+section[aria-labelledby="ironing-booking-heading"],
+section[aria-labelledby="dc-booking-heading"] {
+    padding: 48px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="pickup-booking-heading"] h2,
+section[aria-labelledby="ironing-booking-heading"] h2,
+section[aria-labelledby="dc-booking-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 24px;
+}
+
+section[aria-labelledby="pickup-booking-heading"] > div,
+section[aria-labelledby="ironing-booking-heading"] > div,
+section[aria-labelledby="dc-booking-heading"] > div {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Alternate image side */
+section[aria-labelledby="ironing-booking-heading"] > div {
+    direction: rtl;
+}
+
+section[aria-labelledby="ironing-booking-heading"] > div > * {
+    direction: ltr;
+}
+
+section[aria-labelledby="pickup-booking-heading"] figure,
+section[aria-labelledby="ironing-booking-heading"] figure,
+section[aria-labelledby="dc-booking-heading"] figure {
+    margin: 0;
+}
+
+section[aria-labelledby="pickup-booking-heading"] figure img,
+section[aria-labelledby="ironing-booking-heading"] figure img,
+section[aria-labelledby="dc-booking-heading"] figure img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+section[aria-labelledby="pickup-booking-heading"] figcaption,
+section[aria-labelledby="ironing-booking-heading"] figcaption,
+section[aria-labelledby="dc-booking-heading"] figcaption {
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    margin-top: 8px;
+}
+
+section[aria-labelledby="pickup-booking-heading"] > div > div p,
+section[aria-labelledby="ironing-booking-heading"] > div > div p,
+section[aria-labelledby="dc-booking-heading"] > div > div p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="pickup-booking-heading"] h3,
+section[aria-labelledby="ironing-booking-heading"] h3,
+section[aria-labelledby="dc-booking-heading"] h3 {
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin: 16px 0 8px 0;
+}
+
+section[aria-labelledby="pickup-booking-heading"] ul,
+section[aria-labelledby="ironing-booking-heading"] ul,
+section[aria-labelledby="dc-booking-heading"] ul {
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+section[aria-labelledby="pickup-booking-heading"] ul li,
+section[aria-labelledby="ironing-booking-heading"] ul li,
+section[aria-labelledby="dc-booking-heading"] ul li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+/* iframe booking form */
+section[aria-labelledby="pickup-booking-heading"] iframe {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+/* Note paragraph in italic */
+section[aria-labelledby="pickup-booking-heading"] p em {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* ===== PAYMENT INFO ===== */
+section[aria-labelledby="payment-heading"] {
+    padding: 48px 0 60px 0;
+}
+
+section[aria-labelledby="payment-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="payment-heading"] > p {
+    color: #444;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+section[aria-labelledby="payment-heading"] ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+section[aria-labelledby="payment-heading"] ul li {
+    background-color: #f5f5f5;
+    border-left: 4px solid #1565c0;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+section[aria-labelledby="payment-heading"] figure {
+    margin-top: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 500px;
+}
+
+section[aria-labelledby="payment-heading"] figure img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1a1a2e;
+    color: #ccc;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+footer h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav ul li {
+    margin-bottom: 8px;
+}
+
+footer nav ul li a {
+    color: #aaa;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    color: #fff;
+}
+
+footer a {
+    color: #aaa;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+/* ===== FAQ PAGE HERO ===== */
+section[aria-labelledby="faq-hero-heading"] {
+    text-align: center;
+    margin: 40px 0;
+}
+
+section[aria-labelledby="faq-hero-heading"] figure {
+    margin: 0 0 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+section[aria-labelledby="faq-hero-heading"] figure img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+section[aria-labelledby="faq-hero-heading"] h1 {
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="faq-hero-heading"] p {
+    font-size: 1.05rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section[aria-labelledby="faq-hero-heading"] a {
+    color: #1565c0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ===== FAQ CATEGORY SECTIONS ===== */
+section[aria-labelledby="faq-pricing-heading"],
+section[aria-labelledby="faq-packages-heading"],
+section[aria-labelledby="faq-service-heading"] {
+    padding: 48px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="faq-pricing-heading"] h2,
+section[aria-labelledby="faq-packages-heading"] h2,
+section[aria-labelledby="faq-service-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 32px;
+}
+
+/* Individual Question/Answer Blocks */
+article {
+    margin-bottom: 32px;
+}
+
+article h3 {
+    font-size: 1.1rem;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Optional: Add a subtle 'Q' prefix to questions */
+article h3::before {
+    content: "Q:";
+    color: #1565c0;
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+article p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+article ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+article ul li {
+    margin-bottom: 8px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ===== FAQ TABLE STYLES ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+caption {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #1565c0;
+    color: #fff;
+}
+
+th {
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== CONTACT CTA SECTION ===== */
+section[aria-labelledby="faq-contact-cta"] {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+section[aria-labelledby="faq-contact-cta"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 12px;
+}
+
+section[aria-labelledby="faq-contact-cta"] p {
+    color: #555;
+    margin-bottom: 24px;
+}
+
+section[aria-labelledby="faq-contact-cta"] ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+section[aria-labelledby="faq-contact-cta"] ul li a {
+    color: #1565c0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+section[aria-labelledby="faq-contact-cta"] ul li a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+/* ===== CONTACT PAGE HERO ===== */
+section[aria-labelledby="contact-hero-heading"] {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+section[aria-labelledby="contact-hero-heading"] h1 {
+    font-size: 2.2rem;
+    color: #1565c0;
+    margin-bottom: 16px;
+}
+
+section[aria-labelledby="contact-hero-heading"] p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== CONTACT INFO (Description List) ===== */
+section[aria-labelledby="contact-info-heading"] {
+    padding: 48px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="contact-info-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 24px;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Grid layout for the contact details */
+section[aria-labelledby="contact-info-heading"] dl {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    align-items: baseline;
+}
+
+section[aria-labelledby="contact-info-heading"] dt {
+    font-weight: 700;
+    color: #1a1a2e;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+section[aria-labelledby="contact-info-heading"] dd {
+    margin: 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+section[aria-labelledby="contact-info-heading"] dd a {
+    color: #1565c0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ===== BUSINESS HOURS TABLE ===== */
+section[aria-labelledby="hours-heading"] {
+    padding: 48px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="hours-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 20px;
+}
+
+/* Reusing your table logic for consistency */
+section[aria-labelledby="hours-heading"] table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+}
+
+section[aria-labelledby="hours-heading"] th,
+section[aria-labelledby="hours-heading"] td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="hours-heading"] thead {
+    background-color: #1565c0;
+    color: #fff;
+}
+
+section[aria-labelledby="hours-heading"] tbody th {
+    background-color: #f4f7f9;
+    color: #1a1a2e;
+    width: 150px;
+}
+
+section[aria-labelledby="hours-heading"] p {
+    font-size: 0.9rem;
+    color: #666;
+    background: #fff8e1;
+    padding: 12px;
+    border-left: 4px solid #ffc107;
+}
+
+/* ===== EMBEDS (Forms & Maps) ===== */
+section[aria-labelledby="contact-form-heading"],
+section[aria-labelledby="map-heading"] {
+    padding: 48px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section[aria-labelledby="contact-form-heading"] h2,
+section[aria-labelledby="map-heading"] h2 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 12px;
+}
+
+iframe {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin: 24px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Styling the map footer text */
+section[aria-labelledby="map-heading"] p:last-of-type {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* ===== POLICIES SECTION ===== */
+section[aria-labelledby="policies-heading"] {
+    padding: 60px 0;
+}
+
+section[aria-labelledby="policies-heading"] h2 {
+    font-size: 2rem;
+    color: #1565c0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Policy articles layout */
+section[aria-labelledby="policies-heading"] article {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ddd;
+}
+
+section[aria-labelledby="policies-heading"] article:last-of-type {
+    border-bottom: none;
+}
+
+section[aria-labelledby="policies-heading"] h3 {
+    font-size: 1.2rem;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="policies-heading"] p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+section[aria-labelledby="policies-heading"] strong {
+    color: #1565c0;
+}

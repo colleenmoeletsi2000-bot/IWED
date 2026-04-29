@@ -13,3 +13,4 @@
 - https://unsplash.com/photos/man-carrying-cardboard-boxes-during-daytime-brizG9kR6qI
 - https://unsplash.com/photos/man-riding-motorcycle-on-road-during-daytime-clYlmCaQbzY
 - https://unsplash.com/photos/assorted-color-formal-suit-jackets-Db4d6MRIXJc
+- https://unsplash.com/photos/four-paper-card-tags-KaeaUITiWnc

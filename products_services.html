@@ -3,6 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="We're a proudly South African laundry business built on hard work, community, and a passion for clean clothes."
+        />
+        <meta
+            property="og:title"
+            content="FreshFold Laundry – Professional Laundry & Dry Cleaning Services"
+        />
+        <meta
+            property="og:description"
+            content="We're a proudly South African laundry business built on hard work, community, and a passion for clean clothes."
+        />
         <title>Services – FreshFold Laundry</title>
         <link rel="stylesheet" href="./style.css" />
     </head>
@@ -13,7 +25,15 @@
                 <a href="index.html">FF</a>
                 <span>FreshFold Laundry</span>
             </div>
-            <nav aria-label="Main navigation">
+            <button
+                class="nav-toggle"
+                aria-controls="main-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                &#9776;
+            </button>
+            <nav aria-label="Main navigation" id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -25,7 +45,9 @@
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="book-now.html">Book Now</a></li>
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -376,9 +398,11 @@
             </div>
             <p>
                 <small
-                    >&copy; 2026 FreshFold Laundry. All rights reserved.</small
+                    >&copy; <span id="year"></span> FreshFold Laundry. All
+                    rights reserved.</small
                 >
             </p>
         </footer>
+        <script src="./script.js"></script>
     </body>
 </html>

@@ -3,31 +3,57 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="We're a proudly South African laundry business built on hard work, community, and a passion for clean clothes."
+        />
+        <meta
+            property="og:title"
+            content="FreshFold Laundry – Professional Laundry & Dry Cleaning Services"
+        />
+        <meta
+            property="og:description"
+            content="We're a proudly South African laundry business built on hard work, community, and a passion for clean clothes."
+        />
         <title>Book Now – FreshFold Laundry</title>
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
         <!-- ===== SITE HEADER & NAVIGATION ===== -->
+
         <header>
             <div class="logo">
                 <a href="index.html">FF</a>
                 <span>FreshFold Laundry</span>
             </div>
-            <nav aria-label="Main navigation">
+            <button
+                class="nav-toggle"
+                aria-controls="main-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                &#9776;
+            </button>
+            <nav aria-label="Main navigation" id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="products_services.html">Services</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
+                    <li>
+                        <a href="products_services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="pricing.html">Pricing</a>
+                    </li>
                     <li>
                         <a href="book-now.html" aria-current="page">Book Now</a>
                     </li>
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
-
         <main>
             <!-- ===== PAGE HERO ===== -->
             <section aria-labelledby="book-hero-heading">
@@ -140,26 +166,245 @@
                             confirmation and payment link via email within 15
                             minutes.
                         </p>
-                        <p>
-                            <em>
-                                Note: This form is embedded from Google Forms.
-                                If it does not load, please
-                                <a href="mailto:hello@freshfoldlaundry.co.za"
-                                    >email us directly</a
-                                >
-                                or call
-                                <a href="tel:+27110001234">011 000 1234</a>.
-                            </em>
-                        </p>
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSestBmHsosdGbGRy2F4ziIi3-mYnFJ8AKs6tsRLcPCc4f3n4A/viewform?embedded=true"
-                            width="100%"
-                            height="700"
-                            frameborder="0"
-                            marginheight="0"
-                            marginwidth="0"
-                            >Loading…</iframe
-                        >
+                        <div class="contact-form-wrap">
+                            <h2 id="contact-form-heading">Send Us a Message</h2>
+                            <p>
+                                Fill in the form and we'll get back to you
+                                within 2 business hours.
+                            </p>
+
+                            <!-- Success banner — hidden until JS shows it -->
+                            <div
+                                class="form-success"
+                                id="form-success"
+                                role="alert"
+                                aria-live="polite"
+                                hidden
+                            >
+                                <strong>&#10003; Message sent!</strong> Thank
+                                you — we'll be in touch shortly.
+                            </div>
+
+                            <form id="contact-form" novalidate>
+                                <!-- Full name -->
+                                <div class="field-group">
+                                    <label for="full-name"
+                                        >Full Name
+                                        <span
+                                            class="required"
+                                            aria-hidden="true"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="full-name"
+                                        name="full-name"
+                                        autocomplete="name"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="full-name-error"
+                                        placeholder="e.g. Thandi Mokoena"
+                                    />
+                                    <span
+                                        class="field-error"
+                                        id="full-name-error"
+                                        role="alert"
+                                        aria-live="polite"
+                                    ></span>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="field-group">
+                                    <label for="email"
+                                        >Email Address
+                                        <span
+                                            class="required"
+                                            aria-hidden="true"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        autocomplete="email"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="email-error"
+                                        placeholder="e.g. thandi@email.com"
+                                    />
+                                    <span
+                                        class="field-error"
+                                        id="email-error"
+                                        role="alert"
+                                        aria-live="polite"
+                                    ></span>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="field-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        autocomplete="tel"
+                                        aria-describedby="phone-error"
+                                        placeholder="e.g. 082 000 1234"
+                                    />
+                                    <span
+                                        class="field-error"
+                                        id="phone-error"
+                                        role="alert"
+                                        aria-live="polite"
+                                    ></span>
+                                </div>
+
+                                <!-- Subject / reason -->
+                                <div class="field-group">
+                                    <label for="subject"
+                                        >Subject
+                                        <span
+                                            class="required"
+                                            aria-hidden="true"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <select
+                                        id="subject"
+                                        name="subject"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="subject-error"
+                                    >
+                                        <option value="">
+                                            — Please select —
+                                        </option>
+                                        <option value="general">
+                                            General Enquiry
+                                        </option>
+                                        <option value="booking">
+                                            Booking / Order Query
+                                        </option>
+                                        <option value="pickup">
+                                            Pickup &amp; Delivery
+                                        </option>
+                                        <option value="drycleaning">
+                                            Dry Cleaning
+                                        </option>
+                                        <option value="corporate">
+                                            Corporate / Business Account
+                                        </option>
+                                        <option value="complaint">
+                                            Complaint or Feedback
+                                        </option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <span
+                                        class="field-error"
+                                        id="subject-error"
+                                        role="alert"
+                                        aria-live="polite"
+                                    ></span>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="field-group">
+                                    <label for="message"
+                                        >Message
+                                        <span
+                                            class="required"
+                                            aria-hidden="true"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows="6"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="message-error message-count"
+                                        placeholder="Tell us how we can help you…"
+                                        maxlength="1000"
+                                    ></textarea>
+                                    <span class="field-hint" id="message-count"
+                                        >0 / 1000 characters</span
+                                    >
+                                    <span
+                                        class="field-error"
+                                        id="message-error"
+                                        role="alert"
+                                        aria-live="polite"
+                                    ></span>
+                                </div>
+
+                                <!-- How did you hear -->
+                                <div class="field-group">
+                                    <label for="referral"
+                                        >How did you hear about us?</label
+                                    >
+                                    <select id="referral" name="referral">
+                                        <option value="">
+                                            — Select (optional) —
+                                        </option>
+                                        <option value="google">
+                                            Google Search
+                                        </option>
+                                        <option value="social">
+                                            Social Media
+                                        </option>
+                                        <option value="friend">
+                                            Friend or Family
+                                        </option>
+                                        <option value="flyer">
+                                            Flyer / Poster
+                                        </option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <!-- Privacy consent -->
+                                <div class="field-group field-group--checkbox">
+                                    <input
+                                        type="checkbox"
+                                        id="consent"
+                                        name="consent"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="consent-error"
+                                    />
+                                    <label for="consent">
+                                        I agree that FreshFold Laundry may use
+                                        the information I have provided to
+                                        respond to my enquiry.
+                                        <span
+                                            class="required"
+                                            aria-hidden="true"
+                                            >*</span
+                                        >
+                                    </label>
+                                    <span
+                                        class="field-error"
+                                        id="consent-error"
+                                        role="alert"
+                                        aria-live="polite"
+                                    ></span>
+                                </div>
+
+                                <p class="required-note">
+                                    <span class="required" aria-hidden="true"
+                                        >*</span
+                                    >
+                                    Required fields
+                                </p>
+
+                                <button type="submit" class="btn-submit">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -347,9 +592,12 @@
             </div>
             <p>
                 <small
-                    >&copy; 2026 FreshFold Laundry. All rights reserved.</small
+                    >&copy; <span id="year"></span> FreshFold Laundry. All
+                    rights reserved.</small
                 >
             </p>
         </footer>
+        <script src="./contact.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>
